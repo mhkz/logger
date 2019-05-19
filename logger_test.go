@@ -11,3 +11,12 @@ func TestFileLogger(t *testing.T){
 	logger.Fatal("test Fatal log")
 	logger.Close()
 }
+
+
+func TestConsoleLogger(t *testing.T){
+	logger := NewConsoleLogger(LogLevelDebug)
+	logger.Debug("user id[%d] is come from china", 324234)
+	logger.Warn("test warn log")
+	logger.Fatal("test Fatal log")
+	logger.Close()
+}
