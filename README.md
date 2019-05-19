@@ -22,3 +22,20 @@
 - 打印各个level的日志
 - 设置级别
 - 控制台打印
+
+### How use it ?
+You can refer it
+```
+func initLogger(logPath, logName string, level string)(err error)  {
+	m := make(map[string]string)
+	m["log_path"] = logPath
+	m["log_name"] = "user_server"
+	m["log_level"] = level
+	err = logger.InitLogger("console", m)
+	if err !=nil {
+		return
+	}
+	logger.Debug("init logger success")
+	return
+}
+```
