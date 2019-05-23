@@ -9,6 +9,11 @@ const (
 	LogLevelFatal
 )
 
+const (
+	LogSplitTypeHour = iota
+	LogSplitTypeSize
+)
+
 func getLevelText(level int) string {
 	switch level {
 	case LogLevelDebug:
@@ -26,7 +31,6 @@ func getLevelText(level int) string {
 	}
 	return "UNKNOWN"
 }
-
 
 func getLogLevel(level string) int {
 	switch level {
